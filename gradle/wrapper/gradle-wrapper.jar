@@ -1,0 +1,5 @@
+mkdir -p gradle/wrapper
+wget https://services.gradle.org/distributions/gradle-8.0-bin.zip
+unzip gradle-8.0-bin.zip gradle-8.0/bin/gradle.bat gradle-8.0/bin/gradle gradle-8.0/lib/gradle-wrapper.jar
+mv gradle-8.0/lib/gradle-wrapper.jar gradle/wrapper/
+rm -rf gradle-8.0* gradle-8.0-bin.zip
