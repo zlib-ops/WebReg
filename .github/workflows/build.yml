@@ -22,8 +22,9 @@ jobs:
     
     - name: Verify Gradle Wrapper
       run: |
+        ls -la # Додано для дебагінга
+        ls -la gradle/wrapper # Додано для дебагінга
         ./gradlew --version
-        chmod +x gradlew
     
     - name: Build with Gradle
       run: ./gradlew assembleDebug
