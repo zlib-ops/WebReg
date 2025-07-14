@@ -1,38 +1,52 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
+    android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/urlEditText"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Введіть URL"
-        android:inputType="textUri"
-        android:text="https://browserleaks.com/webrtc"
-        android:padding="12dp"/>
+        android:orientation="horizontal"
+        android:padding="8dp">
 
-    <EditText
-        android:id="@+id/userAgentEditText"
+        <EditText
+            android:id="@+id/urlInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="Введіть URL"
+            android:inputType="textUri" />
+
+        <Button
+            android:id="@+id/loadButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go" />
+    </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Введіть User-Agent (або залиште пустим)"
-        android:inputType="text"
-        android:padding="12dp"/>
+        android:orientation="horizontal"
+        android:padding="8dp">
 
-    <Button
-        android:id="@+id/loadUrlButton"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Завантажити"
-        android:layout_marginHorizontal="12dp"/>
+        <EditText
+            android:id="@+id/userAgentInput"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:hint="User-Agent (необов'язково)" />
+
+        <Button
+            android:id="@+id/setUserAgentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Set" />
+    </LinearLayout>
 
     <WebView
         android:id="@+id/webView"
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_weight="1" />
+        android:layout_height="match_parent" />
 </LinearLayout>
