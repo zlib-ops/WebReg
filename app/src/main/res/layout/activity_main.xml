@@ -1,29 +1,37 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/input_ua"
+        android:id="@+id/urlEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="User-Agent" />
+        android:hint="Введіть URL"
+        android:inputType="textUri"
+        android:text="https://browserleaks.com/webrtc"
+        android:padding="12dp"/>
 
     <EditText
-        android:id="@+id/input_url"
+        android:id="@+id/userAgentEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter URL" />
+        android:hint="Введіть User-Agent (або залиште пустим)"
+        android:inputType="text"
+        android:padding="12dp"/>
 
     <Button
-        android:id="@+id/go_button"
+        android:id="@+id/loadUrlButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Go" />
+        android:text="Завантажити"
+        android:layout_marginHorizontal="12dp"/>
 
     <WebView
-        android:id="@+id/webview"
+        android:id="@+id/webView"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1" />
