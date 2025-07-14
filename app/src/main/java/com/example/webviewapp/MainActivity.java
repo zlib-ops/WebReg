@@ -23,9 +23,6 @@ public class MainActivity extends AppCompatActivity {
         settings.setMediaPlaybackRequiresUserGesture(true);
         settings.setUserAgentString("");
 
-        // Вимкнення WebRTC (не дає гарантії, але вимикає MediaSource та WebRTC APIs максимально доступно)
-        settings.setMediaPlaybackRequiresUserGesture(true);
-
         loadButton.setOnClickListener(v -> {
             String url = urlInput.getText().toString();
             String ua = uaInput.getText().toString();
